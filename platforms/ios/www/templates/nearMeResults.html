@@ -1,0 +1,14 @@
+<ion-view title="{{userLocation}}">
+    <ion-content padding="'true'" class="has-header">
+        <ion-list ng-repeat="artist in location">
+            <ion-item class="item-icon-right has-border" href="#/side-menu/artistPage">
+                <h2><strong>{{artist.artists[0].name}}</strong></h2>
+                <h2>{{artist.venue.name}}</h2>
+                <p>{{artist.datetime | date: 'mediumDate'}}</p>
+                <p>{{artist.venue.city}}</p>
+                <p>{{artist.venue.country}}</p>
+                <i class="ion-chevron-right icon icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

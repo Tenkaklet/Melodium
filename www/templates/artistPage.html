@@ -1,0 +1,31 @@
+<ion-view title="{{name}}">
+    <ion-content padding="'true'" class="has-header">
+        <ion-list>
+            <ion-item class="item-thumbnail-left background has-border">
+                <img ng-src="{{artists.image_url}}">
+                <h2>{{name}}</h2>
+                <p>{{artists.upcoming_event_count}} upcoming shows</p>
+            </ion-item>
+        </ion-list>
+        <div class="list background card has-border" ng-repeat="event in Events | orderBy: 'date'">
+            <div class="item item-divider">{{event.venue.name}}</div>
+            <div class="item item-body">
+                <div>
+                    <p>
+                        <strong>Date:</strong> {{event.datetime | date: 'mediumDate'}}</p>
+                </div>
+                <div>
+                    <p>
+                        <strong>Location:</strong> {{event.venue.city}}, {{event.venue.country}}</p>
+                </div>
+                <div>
+                    <p>
+                        <strong>Tickets Available:</strong> {{event.ticket_status}}</p>
+                </div>
+                <div>
+                    <button class="button button-small button-ticket button-outline" ng-show="event.ticketAvailability">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

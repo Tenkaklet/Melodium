@@ -1,0 +1,12 @@
+{
+  "name": "Melodium",
+  "app_id": "475c10fb",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

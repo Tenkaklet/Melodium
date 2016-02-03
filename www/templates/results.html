@@ -1,0 +1,18 @@
+<ion-view title="{{getConcert.query}}">
+    <ion-content padding="'true'" class="has-header">
+        <div class="not-found-text" ng-show="notFound">
+            <h3>Artist not found...</h3>
+            <p>Please try again</p>
+            <a href="#/side-menu/search" class="button button-stable button-block">Back</a>
+        </div>
+        <ion-list ng-repeat="artist in artists | orderBy: 'date'">
+            <ion-item href="#/side-menu/artistPage/{{artistsName}}" class="item-icon-right has-border">
+                <h2><strong>{{artist.venue.name}}</strong></h2>
+                <p>{{artist.datetime | date: 'mediumDate'}}</p>
+                <p>{{artist.venue.city}}</p>
+                <p>{{artist.venue.country}}</p>
+                <i class="ion-chevron-right icon icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

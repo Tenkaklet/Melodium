@@ -1,0 +1,101 @@
+
+.pane {
+    background: url('../img/app_bg.png');
+    background-size: cover;
+}
+.menu {
+    background-color: transparent;
+}
+.bar.bar-stable {
+    background-color: transparent;
+    border-color: transparent !important;
+    border: none !important;
+    .title {
+        color: #FFF;
+    }
+}
+.bar-no-color {
+    background-color: transparent;
+    border-color: transparent !important;
+    border: none !important;
+}
+.side-menu-left {
+    background-color: #262424;
+}
+label > .item-input, .item {
+    background: none !important;
+}
+label > .placeholder-icon {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+input[type="search"] {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.3rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    &:focus {
+        border-bottom: 1px solid #FFF;
+    }
+}
+.item, .item-complex .item-content,
+.item-radio .item-content {
+    border: none;
+    background-color: #262424;
+    h2 {
+        color: #fff;
+    }
+    p {
+        color: #FFF;
+    }
+    .item-content {
+        color: #FFF;
+    }
+
+}
+.has-border {
+    border: 1px solid #FFF;
+    border-radius: 4px;
+}
+.background {
+    background-color: #262424 !important;
+}
+.item-divider {
+    color: #FFF;
+}
+.back-text {
+    color: #FFF;
+}
+i {
+    color: #FFF;
+}
+.bar-stable .button.button-icon {
+    color: #FFF;
+}
+.mainSearch {
+    margin-top: 50%;
+}
+.button.button-stable.button-clear {
+    color: #FFF;
+    font-weight: 800;
+}
+h5 {
+    color: #FFF;
+}
+.button-ticket {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.button.button-outline {
+    font-weight: 900;
+    border-color: #FFF;
+    color: #FFF;
+}
+.not-found-text {    
+    margin-top: 35vh;
+    text-align: center;
+    h2, h3, h4, p {
+        color: #FFF;
+    }
+}

@@ -1,0 +1,11 @@
+<ion-view>
+    <ion-content padding="'true'" class="has-header">
+        <form class="list mainSearch" ng-submit="getInfo()">
+            <label class="no-background item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search An Artist" ng-model="getConcert.query">
+            </label>
+        </form>
+        <a href="#/side-menu/results" class="button button-stable button-clear button-block" ng-show="getConcert.query" ng-disabled="!getConcert.query">Search It!</a>
+    </ion-content>
+</ion-view>
