@@ -1,0 +1,52 @@
+<header id="result-header">
+    <h1 class="text-center">Your Search: <small>{{currentSearch}}</small></h1>
+    <form ng-submit="newSearch()">
+        <div class="form-group">
+          <input type="text" class="form-control" id="" placeholder="Search for your favorite artist" ng-model="artistQuery">
+              <a class="btn btn-music" ng-click="newSearch()">Search Artist</a>
+              <a class="btn btn-music" id="nearMe">Near Me</a>
+        </div>
+    </form>
+    <!-- search -->
+</header>
+<section class="container-fluid" id="results">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="col-sm-4" ng-repeat="concerts in artists">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">{{concerts.venue.name}} <small>{{concerts.datetime | date: 'mediumDate'}}</small></h4>
+                        <p class="card-text">{{concerts.venue.city}}</p>
+                        <p class="card-text">{{concerts.venue.country}}</p>
+                        <div class="tickets">
+                            <ul>
+                                <li class="ticketStatus"><strong>Ticket Status</strong> <br> <span ng-class="concerts.ticket_status === 'unavailable' ? 'text-danger' : 'text-success'">{{concerts.ticket_status}}</span></li>
+                                <li><a class="btn btn-primary btn-xs ticket-btn" ng-href="{{concerts.ticket_url}}" target="_blank" ng-if="concerts.ticket_status === 'available'">Buy Ticket</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" ng-show="artistBio" id="artistBio">
+            <div class="card">
+                <img class="card-img-top center-block img-responsive" ng-src="{{artistInfo.thumb_url}}" alt="{{artistInfo.name}} Image" />
+                <div class="card-block">
+                    <h1 class="card-title">{{artistInfo.name}}</h1>
+                    <p>
+                        {{overview}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="notFound" ng-show="notFound">
+        <div class="centered">
+            <h1>
+                It seems that your artist of choice is on vacation...
+                <br>
+                How, nice...
+            </h1>
+        </div>
+    </div>
+</section>

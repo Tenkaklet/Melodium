@@ -1,0 +1,15 @@
+<header id="home">
+    <!-- logo -->
+    <!-- <img src="http://placehold.it/300x200" alt="" class="img-responsive center-block"> -->
+    <h1><span>melodium</span></h1>
+    <form ng-submit="getInfo()" novalidate name="theForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="" placeholder="Search for your favorite artist" ng-model="query" required>
+          <div class="center-buttons">
+              <a class="btn btn-music" ng-click="getInfo()" ng-show="query">Search Artist</a>
+              <!-- <button class="btn btn-music" id="nearMe">Near Me</button> -->
+          </div>
+        </div>
+    </form>
+    <!-- search -->
+</header>
